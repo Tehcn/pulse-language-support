@@ -89,6 +89,26 @@
 					"match": "\\+|-|\\*|/|>|<|==|!=|<=|>=|=|\\+=|-=|\\*=|/=|\\+\\+|--"
 				}
 			]
+		},
+		"strings": {
+			"patterns": [
+				{
+					"name": "string.quoted.double",
+					"match": "\"[^\"]*\""
+				},
+				{
+					"name": "string.quoted.single",
+					"match": "'[^']*'"
+				}
+			]
+		},
+		"numbers": {
+			"patterns": [
+				{
+					"name": "constant.numeric",
+					"match": "\\b\\d+(\\.\\d+)?\\b"
+				}
+			]
 		}
 	}
 }
