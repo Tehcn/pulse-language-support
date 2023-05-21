@@ -1,6 +1,6 @@
-# pulse README
+# Pulse
 
-This is the README for your extension "pulse". After writing up a brief description, we recommend including the following sections.
+Pulse is a programming language built for graphics programming. It's currently a work in progress.
 
 ## Features
 
