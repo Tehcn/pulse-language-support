@@ -1,5 +1,5 @@
 {
-    "name": "pulse",
+    "name": "pulse-language-support",
     "displayName": "Pulse",
     "description": "Support for the Pulse programming language",
     "version": "0.0.1",
@@ -10,16 +10,25 @@
         "Programming Languages"
     ],
     "contributes": {
-        "languages": [{
-            "id": "pulse",
-            "aliases": ["Pulse", "pulse"],
-            "extensions": [".pulse"],
-            "configuration": "./language-configuration.json"
-        }],
-        "grammars": [{
-            "language": "pulse",
-            "scopeName": "source.pulse",
-            "path": "./syntaxes/pulse.tmLanguage.json"
-        }]
+        "languages": [
+            {
+                "id": "pulse",
+                "aliases": [
+                    "Pulse",
+                    "pulse"
+                ],
+                "extensions": [
+                    ".pulse"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "pulse",
+                "scopeName": "source.pulse",
+                "path": "./syntaxes/pulse.tmLanguage.json"
+            }
+        ]
     }
 }
