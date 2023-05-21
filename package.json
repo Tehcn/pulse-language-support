@@ -1,0 +1,25 @@
+{
+    "name": "pulse",
+    "displayName": "Pulse",
+    "description": "Support for the Pulse programming language",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.78.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "pulse",
+            "aliases": ["Pulse", "pulse"],
+            "extensions": [".pulse"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "pulse",
+            "scopeName": "source.pulse",
+            "path": "./syntaxes/pulse.tmLanguage.json"
+        }]
+    }
+}

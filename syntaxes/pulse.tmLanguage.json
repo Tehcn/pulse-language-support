@@ -1,0 +1,94 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Pulse",
+	"scopeName": "source.pulse",
+	"fileTypes": [
+		"pulse"
+	],
+	"patterns": [
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#types"
+		},
+		{
+			"include": "#functions"
+		},
+		{
+			"include": "#imports"
+		},
+		{
+			"include": "#control-structures"
+		},
+		{
+			"include": "#operators"
+		}
+	],
+	"repository": {
+		"comments": {
+			"patterns": [
+				{
+					"name": "comment.line",
+					"match": "//.*$"
+				},
+				{
+					"name": "comment.block",
+					"begin": "/\\*",
+					"end": "\\*/"
+				}
+			]
+		},
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword",
+					"match": "\\b(fn|typedef)\\b"
+				}
+			]
+		},
+		"types": {
+			"patterns": [
+				{
+					"name": "storage.type",
+					"match": "\\b(int|float|double|string|bool)\\b"
+				}
+			]
+		},
+		"functions": {
+			"patterns": [
+				{
+					"name": "entity.name.function",
+					"match": "\\bfn\\s+\\w+\\b"
+				}
+			]
+		},
+		"imports": {
+			"patterns": [
+				{
+					"name": "keyword",
+					"match": "\\bimport\\s+\\w+(\\.\\w+)*\\b"
+				}
+			]
+		},
+		"control-structures": {
+			"patterns": [
+				{
+					"name": "keyword",
+					"match": "\\b(for|while|if|else)\\b"
+				}
+			]
+		},
+		"operators": {
+			"patterns": [
+				{
+					"name": "keyword.operator",
+					"match": "\\+|-|\\*|/|>|<|==|!=|<=|>=|=|\\+=|-=|\\*=|/=|\\+\\+|--"
+				}
+			]
+		}
+	}
+}
