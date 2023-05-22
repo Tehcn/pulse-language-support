@@ -16,12 +16,6 @@
 			"include": "#types"
 		},
 		{
-			"include": "#functions"
-		},
-		{
-			"include": "#imports"
-		},
-		{
 			"include": "#control-structures"
 		},
 		{
@@ -32,6 +26,12 @@
 		},
 		{
 			"include": "#numbers"
+		},
+		{
+			"include": "#functions"
+		},
+		{
+			"include": "#package-name"
 		}
 	],
 	"repository": {
@@ -52,7 +52,7 @@
 			"patterns": [
 				{
 					"name": "keyword",
-					"match": "\\b(fn|typedef|return)\\b"
+					"match": "\\b(fn|typedef|return|import)\\b"
 				}
 			]
 		},
@@ -61,22 +61,6 @@
 				{
 					"name": "storage.type",
 					"match": "\\b(int|float|double|string|bool)\\b"
-				}
-			]
-		},
-		"functions": {
-			"patterns": [
-				{
-					"name": "entity.name.function",
-					"match": "\\bfn\\s+\\w+\\b"
-				}
-			]
-		},
-		"imports": {
-			"patterns": [
-				{
-					"name": "keyword",
-					"match": "\\bimport\\s+\\w+(\\.\\w+)*\\b"
 				}
 			]
 		},
@@ -113,6 +97,30 @@
 				{
 					"name": "constant.numeric",
 					"match": "\\b\\d+(\\.\\d+)?\\b"
+				}
+			]
+		},
+		"package-name": {
+			"patterns": [
+				{
+					"name": "entity.name.type",
+					"match": "\\b([a-zA-Z_-]*)\\.\\b"
+				}
+			]
+		},
+		"functions": {
+			"patterns": [
+				{
+					"name": "entity.name.function",
+					"match": "\\b(?<=fn )([a-zA-Z_-]*)\\b"
+				},
+				{
+					"name": "entity.name.function",
+					"match": "\\b(?<=\\.)\\w+(?=\\()\\b"
+				},
+				{
+					"name": "entity.name.function",
+					"match": "\\b[a-zA-Z_]*(?=\\()\\b"
 				}
 			]
 		}
