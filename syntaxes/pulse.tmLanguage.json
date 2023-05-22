@@ -26,6 +26,12 @@
 		},
 		{
 			"include": "#operators"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#numbers"
 		}
 	],
 	"repository": {
@@ -46,7 +52,7 @@
 			"patterns": [
 				{
 					"name": "keyword",
-					"match": "\\b(fn|typedef)\\b"
+					"match": "\\b(fn|typedef|return)\\b"
 				}
 			]
 		},
